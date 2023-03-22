@@ -1,0 +1,355 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+.btn{
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 15px;
+    color: black;
+    padding: 15px 40px;
+    background-color: rgb(255, 217, 0);
+}
+.btn:hover{
+    transition: .4s all;
+    color: white;
+    background-color: black;
+}
+
+
+header{
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    padding: 0px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    color: black;
+    font-size: 25px;
+}
+header .navbar ul{
+    list-style-type: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    padding: 20px;
+    font-size: 15px;
+    color: #333;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: #333;
+    display: none;
+}
+.text{
+    width: 100%;
+    height: 100vh;
+    background: url(/Img/landpageimg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text button{
+    font-weight: 200;
+    color: black;
+    padding: 15px 40px;
+    background-color: rgb(255, 217, 0);
+    border: 1px solid rgb(255, 217, 0);
+    margin-top: 100px;
+}
+.text button:hover{transition: .5s all;
+    background: none;
+    border: 1px solid  rgb(255, 217, 0);
+    color: white;
+}
+
+
+/* animation text starts here */
+.mllo{
+    position: absolute;
+    font-weight: 400;
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+
+.mllo .text-wrapper{
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.5em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.mllo .letter{
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+}
+
+/* abouut */
+
+
+.abt-img{
+    width: 70%;
+    margin-top: -50px;
+}
+.abt-texts p{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section#about {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+    margin-left: 100px;
+}
+.texts h2{
+    margin-bottom: 10px;
+
+}
+section#about .texts {
+    width: 55%;
+    position: relative;
+    left: 24px;
+    z-index: 5;
+    padding-bottom: 96px;
+    text-align: center;
+}
+
+section#about .frame {
+    border: 1px solid #b4914e;
+    padding: 140px 100px 140px 40px;
+}
+footer{
+    width: 100%;
+    height: 50vh;
+    background: rgba(128, 128, 128, 0.938);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  footer .social{
+      margin-top: 150px;
+      color: white;
+  }
+
+  footer .social .title{
+      margin-top: -50px;
+      margin-bottom: 20px;
+  }
+
+  footer a{
+    text-decoration: none;
+    color: white;
+  }
+
+  footer a:hover{
+      color: yellow;
+      transition: .4s all;
+  }
+
+  footer ion-icon{
+      margin: 0 20px;
+      font-size: 20px;
+  }
+
+  footer .links{
+      display: flex;
+      flex-direction: column;
+      margin-top: 90px;
+  }
+
+  footer .links a{
+      margin: 5px 0;
+  }
+
+  footer .feed-letter{
+      width: 250px;
+    margin-top: 110px;
+  }
+
+  footer form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer form button{
+      width: 150px;
+      padding: 9px;
+      border: none;
+      color: white;
+      background: green;
+      cursor: pointer;
+      margin-top: 20px;
+  }
+  footer form button:hover{
+    background: black;
+    color: white;
+  }
+
+  form input{
+      padding: 10px;
+      border: none;
+      outline: none;
+      
+  }
+  hr{
+    width: 70px;
+    color: black;
+    margin: 5px;
+  }
+
+  @media screen and (max-width: 375px){
+      footer{
+          height: fit-content;
+          flex-direction: column;
+      }
+
+      footer .feed-letter {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        margin-top: 110px;
+    }
+
+    form input{
+       width: 90%;
+       margin-left: 20px;
+    }
+    
+    form button{
+    margin-left: 20px;
+}
+
+    footer form {
+        width: 100%;
+      }
+  }
+  @media screen and (max-width: 600px){
+      footer{
+          height: fit-content;
+          flex-direction: column;
+      }
+
+      footer .feed-letter {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        margin-top: 110px;
+    }
+
+    form input{
+       width: 90%;
+       margin-left: 20px;
+    }
+    
+    form button{
+    margin-left: 20px;
+}
+
+    footer form {
+        width: 100%;
+      }
+  }
+
+  /* circle */
+  .circle-sec{
+    width: 100%;
+    height: 100vh;
+    background: rgba(128, 128, 128, 0.938);
+    border: 1px solid red;
+  }
+
+ .circle {
+    border-radius: 50%;
+
+    /* border: 10px dashed red; */
+}
+.first-circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.lorem{
+    font-weight: 200;
+    color: black;
+    padding: 15px 40px;
+    background-color: rgb(255, 217, 0);
+    border: none;
+    margin-top: 50px;
+    transition: 0.3s;
+    
+}
+.lorem:hover{
+    background: black;
+    border: none;
+    color: white;
+
+}
+
+/* media query */
+@media(max-width:991px){
+
+}

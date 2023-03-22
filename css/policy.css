@@ -1,0 +1,417 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* font-family: josefin; */
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+}
+:root{
+    --main-color :#4CAF50 ;
+}
+
+.nav{
+    display: flex;
+    gap: 50px;
+   
+}
+
+body{
+    background-color: #1a1a1af1;
+    /* height: 300vh; */
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    padding: 20px 0px;
+    /* margin-left: -90px; */
+    width: 100%;
+    /* background-color: aliceblue; */
+    position: fixed;
+    z-index: 200;
+     border-bottom-left-radius: 30px;
+     transition-duration: 1s;
+}
+.header-scrolled{
+    background-color: #1a1a1a;
+}
+ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+li a{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    transition: 0.5s;
+    position: relative;
+    font-weight: 900;
+    position: relative;
+}  
+header .nav ul li{
+    position: relative;
+    float: left;
+}
+
+header .nav ul li ul{
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+    width: 100px;
+    background: #fff;
+    display: none;
+   line-height: 35px;
+}
+header .nav ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+   
+}
+header .nav ul li ul li a{
+    color: black;
+}
+header .nav ul li ul li a:hover{
+    color: var(--main-color);
+}
+header .nav ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+header .nav ul li:hover > ul{
+    display: initial;
+}
+
+
+.mylogo{
+    color: var(--main-color);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.mobile-nav-bar-toggle{
+    display: none;
+}
+/* .nav{
+    display: none;
+} */
+.cartandbtn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cartandbtns{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 930px) {
+    header{
+        justify-content: left;
+        gap: 100px;
+        padding-left: 20px;
+        /* position: relative; */
+        background: none;
+
+    }
+    .nav{
+        display: block;
+        position: fixed;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        /* background: hsl(0 0% 100%/ 0.2); */
+        backdrop-filter: blur(1rem);
+        inset: 0 0 0 min(50%, 594px) ;
+       text-align: center;
+       padding-top: 100px;
+       border-bottom-left-radius: 50px;
+       z-index: 1000;
+       transform: rotate(0.3deg);
+       transform: translateX(100%);
+       transition: 0.5s;
+    }
+    .nav[data-visible= "true"]{
+        transition: 1s;
+        transform: translateX(0%);
+      
+    }
+    .mobile-nav-bar-toggle[aria-expanded="true"]{
+        background: url(../img/icons/delete_50px.svg);
+        background-repeat: no-repeat;
+        position: fixed;
+    }
+    ul{
+        flex-direction: column;
+    }
+    .cartandbtn {
+    justify-content: center;
+    margin-top: 50px;
+        }
+    .mobile-nav-bar-toggle{
+        display: block;
+        width: 35px;
+        width: 1rem;
+        height: 1.5rem;
+        aspect-ratio: 1;
+        background: url(../img/icons/ham.png);
+        /* background: url(..////////img/icons/delete_50px.svg); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        background-color: transparent;
+        border: 0;
+        top: 1rem;
+        right: 2rem;
+        z-index: 9999;
+        transition: 0.3s;
+    }
+    .cartandbtns{
+        display: none;
+    }
+}
+
+.explore-btn{
+    padding: 15px 45px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.explore-btn:hover{
+    box-shadow: 7px 8px 1px 0px #337235;
+}
+@media (max-width: 500px) {
+    .nav{
+        display: block;
+        position: fixed;
+        flex-direction: column;
+        inset: 0 0 0 min(40%, 200px) !important;
+       text-align: center;
+       border-bottom-left-radius: 20px;
+    }
+}
+@media (max-width: 390px) {
+    .nav{
+        position: fixed;
+        flex-direction: column;
+        inset: 0 0 0 min(20%, 200px) !important;
+       text-align: center;
+    }
+}
+
+.policy{
+    padding: 100px;
+    width: 80%;
+    min-height: 150vh;
+    background-color: #4CAF50;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-right: 150px;
+    margin-bottom: 100px;
+}
+.headding{
+    padding-top: 200px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+.purchase h4{
+    color: #1a1a1a;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+.purchase p{
+    margin-top: 20px;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    line-height: 20px;
+}
+.rent h4{
+    margin-top: 90px;
+    color: #1a1a1a;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+.rent h5{
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.rent p{
+    margin-top: 20px;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    width: 100%;
+    min-height: 50vh;
+    background-color: #1a1a1a;
+    margin-top: 0px;
+  }
+  .footer-flex{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: flex-end;
+    height: 40vh;
+  }
+.footer-line{
+    width: 90%;
+    margin-top: 10px;
+    margin-inline: 50px;
+    border: none;
+    border-top: 1px solid #3c3c3c;
+}
+.policies{
+    text-align: center;
+    margin-top: 80px;
+}
+  footer .social{
+      margin-top: 150px;
+      color: white;
+  }
+  .copyright{
+    margin-top: 15px;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  footer .social .title{
+      margin-top: -50px;
+      margin-bottom: 20px;
+  }
+
+  footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  footer a:hover{
+      color: var(--main-color);
+      transition: .4s all;
+      
+  }
+  .checkBox{
+    display: flex; 
+  }
+  .checkbox-title{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  footer ion-icon{
+      margin: 0 20px;
+      font-size: 20px;
+  }
+
+  footer .links{
+      display: flex;
+      flex-direction: column;
+      margin-top: 90px;
+  }
+
+  footer .links a{
+      margin: 5px 0;
+  }
+
+  footer .feed-letter{
+      width: 250px;
+    margin-top: 110px;
+  }
+  .join{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .jointext{
+    color: white;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+  }
+  hr{
+    width: 70px;
+     background-color: main;
+    margin: 5px;
+  }
+
+  @media screen and (max-width: 375px){
+      .footer-flex{
+          height: fit-content;
+          flex-direction: column;
+      }
+      .container .slide-container .slide .user{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+      footer .feed-letter {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        margin-top: 110px;
+    }
+    .description{
+        padding: 20px 30px;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .footer-flex{
+          height: fit-content;
+          flex-direction: column;
+            padding-bottom: 30px;
+            align-items: center;
+      }
+
+      footer .feed-letter {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        margin-top: 110px;
+    }
+        footer .links {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        .footer-line{
+            width: 90%;
+            margin-top: 80px;
+            margin-inline: 20px;
+            border: none;
+            border-top: 1px solid #3c3c3c;
+        }
+}
